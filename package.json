@@ -11,6 +11,10 @@
   },
   "author": "keik",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keik/grep-unused-selectors-sass.git"
+  },
   "dependencies": {
     "chalk": "^2.4.2",
     "glob": "^7.1.4",
