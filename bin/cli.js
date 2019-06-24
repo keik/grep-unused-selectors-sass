@@ -21,9 +21,6 @@ const argv = require("yargs")
     "grep-path": {
       description: "Pathspec of git-grep",
       required: true
-    },
-    _: {
-      required: true
     }
   }).argv;
 
