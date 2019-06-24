@@ -1,0 +1,12 @@
+{
+  "name": "grep-unused-selectors-sass",
+  "version": "0.0.0",
+  "description": "Detect unused class selectors of sass by grep.",
+  "bin": {
+    "grep-unused-selectors-sass": "bin/cli.js"
+  },
+  "main": "index.js",
+  "scripts": {},
+  "author": "keik",
+  "license": "MIT"
+}
