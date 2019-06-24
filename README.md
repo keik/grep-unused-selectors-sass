@@ -1,5 +1,7 @@
 # grep-unused-selectors-sass
 
+[![npm-version](https://img.shields.io/npm/v/grep-unused-selectors-sass.svg?style=flat-square)](https://npmjs.org/package/grep-unused-selectors-sass)
+
 Detect potentially unused class selectors of sass by `git-grep`.
 
 
