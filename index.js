@@ -1,16 +1,29 @@
 const spawn = require("child_process").spawn;
 
-const debug = require("debug")("grep-unused-selectors-sass");
 const chalk = require("chalk");
+const debug = require("debug")("grep-unused-selectors-sass");
+const glob = require("glob");
 const sass = require("node-sass");
 const postcss = require("postcss");
 
 const MAX_CONCURRENCY = 10;
 
 module.exports = function grepUnusedSelectorsSass(opts) {
-  const { entries, grepPath, includePath, verbose } = opts;
-
   debug(`opts: ${JSON.stringify(opts, null, 2)}`);
+
+  const { grepPath, includePath, verbose } = opts;
+
+  // glob multiple patterns and uniquify
+  const entries = Array.from(
+    new Set(
+      Array.prototype.concat.apply(
+        [],
+        opts.entries.map(entry => glob.sync(entry))
+      )
+    )
+  );
+
+  debug(`entries: ${JSON.stringify(entries)}`);
 
   const cssString = getCompiledCss(entries, { includePath, verbose });
   const classSelectors = extractClassSelectorsFromCss(cssString, { verbose });
