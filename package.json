@@ -1,6 +1,6 @@
 {
   "name": "grep-unused-selectors-sass",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Detect potentially unused class selectors of sass by `git-grep`.",
   "bin": {
     "grep-unused-selectors-sass": "bin/cli.js"
