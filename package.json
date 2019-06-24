@@ -6,7 +6,25 @@
     "grep-unused-selectors-sass": "bin/cli.js"
   },
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint '**/*.js'"
+  },
   "author": "keik",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "postcss": "^7.0.17",
+    "yargs": "^13.2.4"
+  },
+  "devDependencies": {
+    "debug": "^4.1.1",
+    "eslint": "^6.0.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2"
+  },
+  "peerDependencies": {
+    "node-sass": "^4.0.0"
+  }
 }
