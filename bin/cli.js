@@ -9,6 +9,7 @@ const argv = require("yargs")
   .demandCommand(1, "You need at least one entries")
   .options({
     verbose: {
+      boolean: true,
       description: "Run with verbose logs",
       required: false
     },
