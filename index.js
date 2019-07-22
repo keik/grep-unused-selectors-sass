@@ -45,7 +45,7 @@ const getCompiledCss = (entries, { includePath = [], verbose }) => {
         .css.toString()
         .replace(/@charset.+/, "")
     )
-    .join("//\n");
+    .join("\n");
 };
 
 const extractClassSelectorsFromCss = (cssString, { verbose }) => {
