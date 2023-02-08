@@ -3,7 +3,7 @@ const spawn = require("child_process").spawn;
 const chalk = require("chalk");
 const debug = require("debug")("grep-unused-selectors-sass");
 const glob = require("glob");
-const sass = require("node-sass");
+const sass = require("sass");
 const postcss = require("postcss");
 
 const MAX_CONCURRENCY = 10;
